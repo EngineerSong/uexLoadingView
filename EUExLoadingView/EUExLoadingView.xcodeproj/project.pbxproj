@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3C942BC61A848AC800DFD503 /* EUExLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C942BC51A848AC800DFD503 /* EUExLoadingView.m */; };
 		3C942BEC1A84A7B700DFD503 /* MONActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C942BEB1A84A7B700DFD503 /* MONActivityIndicatorView.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		3CD9B4AE1C3A7A79003F3075 /* ActivityViewShareController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD9B4AD1C3A7A79003F3075 /* ActivityViewShareController.m */; };
 		F7991D211ADCA4520047E428 /* TYDotIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7991D201ADCA4520047E428 /* TYDotIndicatorView.m */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,8 @@
 		3C942BE71A84A7B700DFD503 /* EUExLoadingView-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EUExLoadingView-Prefix.pch"; sourceTree = "<group>"; };
 		3C942BEA1A84A7B700DFD503 /* MONActivityIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MONActivityIndicatorView.h; sourceTree = "<group>"; };
 		3C942BEB1A84A7B700DFD503 /* MONActivityIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MONActivityIndicatorView.m; sourceTree = "<group>"; };
+		3CD9B4AC1C3A7A6E003F3075 /* ActivityViewShareController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActivityViewShareController.h; sourceTree = "<group>"; };
+		3CD9B4AD1C3A7A79003F3075 /* ActivityViewShareController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityViewShareController.m; sourceTree = "<group>"; };
 		F7991D1F1ADCA4520047E428 /* TYDotIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYDotIndicatorView.h; sourceTree = "<group>"; };
 		F7991D201ADCA4520047E428 /* TYDotIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYDotIndicatorView.m; sourceTree = "<group>"; };
 		F7991D231ADCA4710047E428 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
@@ -82,6 +85,8 @@
 				3C942BE31A84A7B700DFD503 /* engineHeader */,
 				3C942BE71A84A7B700DFD503 /* EUExLoadingView-Prefix.pch */,
 				3C942BE81A84A7B700DFD503 /* sourceCode */,
+				3CD9B4AC1C3A7A6E003F3075 /* ActivityViewShareController.h */,
+				3CD9B4AD1C3A7A79003F3075 /* ActivityViewShareController.m */,
 			);
 			path = EUExLoadingView;
 			sourceTree = "<group>";
@@ -206,6 +211,7 @@
 				F7991D211ADCA4520047E428 /* TYDotIndicatorView.m in Sources */,
 				3C942BEC1A84A7B700DFD503 /* MONActivityIndicatorView.m in Sources */,
 				3C942BC61A848AC800DFD503 /* EUExLoadingView.m in Sources */,
+				3CD9B4AE1C3A7A79003F3075 /* ActivityViewShareController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

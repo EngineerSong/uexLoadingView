@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <uexplugins>
     <plugin
-        uexName="uexLoadingView" version="3.0.3" build="3">
-        <info>3:uexLoadingView插件,修改open接口</info>
+        uexName="uexLoadingView" version="3.0.4" build="4">
+        <info>4:新增openCircleLoading接口</info>
+        <build>3:uexLoadingView插件,修改open接口</build>
         <build>2:修改配置文件</build>
         <build>1:适配iOS5的版本</build>
         <build>0:uexLoadingView等待框插件</build>

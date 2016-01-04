@@ -10,6 +10,7 @@
 #import "MONActivityIndicatorView.h"
 #import "EUExBase.h"
 #import "TYDotIndicatorView.h"
+#import "ActivityViewShareController.h"
 
 @interface EUExLoadingView : EUExBase
 

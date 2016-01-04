@@ -3,5 +3,6 @@
     <plugin name="uexLoadingView">
         <method name="open"></method>
         <method name="close"></method>
+        <method name="openCircleLoading"></method>
     </plugin>
 </uexplugins>
