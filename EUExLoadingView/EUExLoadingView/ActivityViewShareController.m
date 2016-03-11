@@ -22,7 +22,8 @@
 
 
 -(void)viewWillAppear:(BOOL)animated{
-    self.view.backgroundColor=[UIColor colorWithWhite:0 alpha:0.3];
+    self.view.backgroundColor=[UIColor colorWithWhite:0.2 alpha:0.3];
+    
     [self.view addSubview:self.activityView];
     [self.activityView startAnimating];
 }

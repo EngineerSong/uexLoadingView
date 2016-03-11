@@ -78,93 +78,21 @@
         [ self.circleView release];
     }
 }
-//-(void)openCircleLoading:(NSMutableArray *)inArguments{
-//    if (self.activityView) {
-//        [self.activityView stopAnimating];
-//        [_activityView removeFromSuperview];
-//        //[_activityViewBG removeFromSuperview];
-//        //self.activityViewBG = nil;
-//        self.activityView = nil;
-//    }
-////    NSInteger x = 0;
-////    NSInteger y = 0;
-////    NSInteger w = 0;
-////    NSInteger h = 0;
-////    if (inArguments.count > 0 ) {
-////        NSString *dataJson = [inArguments objectAtIndex:0];
-////        NSDictionary *dataDict = [dataJson JSONValue];
-////        x = [[dataDict objectForKey:@"x"] integerValue];
-////        y = [[dataDict objectForKey:@"y"] integerValue];
-////        w = [[dataDict objectForKey:@"w"] integerValue];
-////        h = [[dataDict objectForKey:@"h"] integerValue];
-////    }
-////    self.activityView = [[UIActivityIndicatorView alloc]  initWithFrame:CGRectMake(0, 0, w, h)];
-////    self.activityView.activityIndicatorViewStyle=UIActivityIndicatorViewStyleWhite;
-////    self.activityView.center=CGPointMake(x-w/2,y-h/2);
-////    self.activityView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
-////    self.activityViewBG=[[UIView alloc]initWithFrame:[EUtility brwViewFrame:meBrwView ]];
-////    self.activityViewBG.backgroundColor=[UIColor colorWithWhite:0 alpha:0.3];
-////    [self.activityViewBG addSubview:self.activityView];
-////    [EUtility brwView:meBrwView addSubview: self.activityViewBG];
-////    [self.activityView startAnimating];
-////    
-////    [self.activityView release];
-////    [self.activityViewBG release];
-//    
-//    self.activityView = [[UIActivityIndicatorView alloc]  initWithFrame:[EUtility brwViewFrame:meBrwView ]];
-//    self.activityView.activityIndicatorViewStyle=UIActivityIndicatorViewStyleWhiteLarge;
-//    self.activityView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
-//    self.activityView.backgroundColor=[UIColor colorWithWhite:0 alpha:0.3];
-//    [EUtility brwView:meBrwView addSubview: self.activityView];
-//    [self.activityView startAnimating];
-//    
-//    [self.activityView release];
-//    
-//}
-//#pragma mark -
-//
-//-(void)close:(NSMutableArray *)inArguments {
-//    
-//    if (self.indicatorView) {
-//        [_indicatorView removeFromSuperview];
-//        self.indicatorView = nil;
-//    }
-//    if (self.circleView) {
-//        [_circleView removeFromSuperview];
-//        self.circleView = nil;
-//    }
-//    if (self.activityView) {
-//        [self.activityView stopAnimating];
-//        [_activityView removeFromSuperview];
-//        //[_activityViewBG removeFromSuperview];
-//        //self.activityViewBG = nil;
-//        self.activityView = nil;
-//    }
-//    self.pointColorArr  = nil;
-//}
-
-
 -(void)openCircleLoading:(NSMutableArray *)inArguments{
-    ActivityViewShareController *shareView=[ActivityViewShareController sharedManager];
-    if (shareView.activityView) {
-        [shareView.activityView stopAnimating];
-        [shareView.activityView removeFromSuperview];
-        shareView.activityView = nil;
+    if (self.activityView) {
+        [self.activityView stopAnimating];
+        [_activityView removeFromSuperview];
+        self.activityView = nil;
     }
     
-    shareView.activityView = [[UIActivityIndicatorView alloc]  initWithFrame:[EUtility brwViewFrame:meBrwView ]];
-    shareView.activityView.activityIndicatorViewStyle=UIActivityIndicatorViewStyleWhiteLarge;
-    shareView.activityView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
+    self.activityView = [[UIActivityIndicatorView alloc]  initWithFrame:[EUtility brwWndFrame:meBrwView ]];
+    self.activityView.activityIndicatorViewStyle=UIActivityIndicatorViewStyleWhiteLarge;
+    self.activityView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
+    self.activityView.backgroundColor=[UIColor colorWithWhite:0 alpha:0.3];
+    [EUtility brwView:meBrwView addSubview: self.activityView];
+    [self.activityView startAnimating];
     
-    if ([[[UIDevice currentDevice] systemVersion] floatValue]>=8.0) {
-        shareView.modalPresentationStyle=UIModalPresentationOverCurrentContext;
-    }else{
-        shareView.modalPresentationStyle=UIModalPresentationCurrentContext;
-        
-    }
-    [EUtility brwView:meBrwView presentModalViewController:shareView animated:NO];
-    
-    [shareView.activityView release];
+    [self.activityView release];
     
 }
 #pragma mark -
@@ -179,15 +107,57 @@
         [_circleView removeFromSuperview];
         self.circleView = nil;
     }
-    ActivityViewShareController *shareView=[ActivityViewShareController sharedManager];
-    if (shareView.activityView) {
-        [shareView.activityView stopAnimating];
-        [shareView.activityView removeFromSuperview];
-        shareView.activityView = nil;
-        [shareView back];
+    if (self.activityView) {
+        [self.activityView stopAnimating];
+        [_activityView removeFromSuperview];
+        self.activityView = nil;
     }
     self.pointColorArr  = nil;
 }
+
+////presentModalViewController的方式在ios7上设置不了透明
+//-(void)openCircleLoading:(NSMutableArray *)inArguments{
+//    ActivityViewShareController *shareView=[ActivityViewShareController sharedManager];
+//    if (shareView.activityView) {
+//        [shareView.activityView stopAnimating];
+//        [shareView.activityView removeFromSuperview];
+//        shareView.activityView = nil;
+//    }
+//    
+//    shareView.activityView = [[UIActivityIndicatorView alloc]  initWithFrame:[EUtility brwWndFrame:meBrwView ]];
+//    shareView.activityView.activityIndicatorViewStyle=UIActivityIndicatorViewStyleWhiteLarge;
+//    shareView.activityView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
+//    
+//    if ([[[UIDevice currentDevice] systemVersion] floatValue]>=8.0) {
+//        shareView.modalPresentationStyle=UIModalPresentationOverCurrentContext;
+//    }else{
+//        shareView.modalPresentationStyle=UIModalPresentationCurrentContext;
+//        
+//    }
+//    [EUtility brwView:meBrwView presentModalViewController:shareView animated:NO];
+//    
+//    [shareView.activityView release];
+//    
+//}
+//-(void)close:(NSMutableArray *)inArguments {
+//    
+//    if (self.indicatorView) {
+//        [_indicatorView removeFromSuperview];
+//        self.indicatorView = nil;
+//    }
+//    if (self.circleView) {
+//        [_circleView removeFromSuperview];
+//        self.circleView = nil;
+//    }
+//    ActivityViewShareController *shareView=[ActivityViewShareController sharedManager];
+//    if (shareView.activityView) {
+//        [shareView.activityView stopAnimating];
+//        [shareView.activityView removeFromSuperview];
+//        shareView.activityView = nil;
+//        [shareView back];
+//    }
+//    self.pointColorArr  = nil;
+//}
 
 -(void)clean{
     [self close:nil];
