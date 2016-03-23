@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <uexplugins>
     <plugin
-        uexName="uexLoadingView" version="3.0.5" build="5">
-        <info>5:修复openCircleLoading在ios7上背景不透明的BUG</info>
+        uexName="uexLoadingView" version="3.0.6" build="6">
+        <info>6:添加IDE支持</info>
+        <build>5:修复openCircleLoading在ios7上背景不透明的BUG</build>
         <build>4:新增openCircleLoading接口</build>
         <build>3:uexLoadingView插件,修改open接口</build>
         <build>2:修改配置文件</build>
