@@ -20,13 +20,13 @@
 
 @implementation EUExLoadingView
 
--(id)initWithBrwView:(EBrowserView *)eInBrwView{
-    self = [super initWithBrwView:eInBrwView];
-    if (self) {
-        
-    }
-    return self;
-}
+//-(id)initWithBrwView:(EBrowserView *)eInBrwView{
+//    self = [super initWithBrwView:eInBrwView];
+//    if (self) {
+//        
+//    }
+//    return self;
+//}
 -(void)open:(NSMutableArray *)inArguments{
 
     NSInteger x = 0;
@@ -64,7 +64,8 @@
         [self.indicatorView setColorArr:self.pointColorArr];
         self.indicatorView.frame = CGRectMake(x, y, w, h);
         [self.indicatorView startAnimating];
-        [EUtility brwView:meBrwView addSubview:self.indicatorView];
+        //[EUtility brwView:meBrwView addSubview:self.indicatorView];
+        [[self.webViewEngine webView] addSubview:self.indicatorView];
         
     }else{
         if (self.circleView) {
@@ -74,7 +75,8 @@
         self.circleView = [[TYDotIndicatorView alloc] initWithFrame:CGRectMake(x, y, w, h) dotStyle:TYDotIndicatorViewStyleCircle dotColor:self.pointColorArr dotSize:CGSizeMake(20, 20) numberOfCircle:pointNum];
         [ self.circleView startAnimating];
          self.circleView.layer.cornerRadius = 10.0f;
-        [EUtility brwView:meBrwView addSubview: self.circleView];
+        //[EUtility brwView:meBrwView addSubview: self.circleView];
+        [[self.webViewEngine webView] addSubview:self.circleView];
         [ self.circleView release];
     }
 }
@@ -85,11 +87,13 @@
         self.activityView = nil;
     }
     
-    self.activityView = [[UIActivityIndicatorView alloc]  initWithFrame:[EUtility brwWndFrame:meBrwView ]];
+    //self.activityView = [[UIActivityIndicatorView alloc]  initWithFrame:[EUtility brwWndFrame:meBrwView]];
+    self.activityView = [[UIActivityIndicatorView alloc]  initWithFrame:[UIApplication sharedApplication].keyWindow.frame];
     self.activityView.activityIndicatorViewStyle=UIActivityIndicatorViewStyleWhiteLarge;
     self.activityView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
     self.activityView.backgroundColor=[UIColor colorWithWhite:0 alpha:0.3];
-    [EUtility brwView:meBrwView addSubview: self.activityView];
+    //[EUtility brwView:meBrwView addSubview: self.activityView];
+    [[self.webViewEngine webView] addSubview:self.activityView];
     [self.activityView startAnimating];
     
     [self.activityView release];

@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "MONActivityIndicatorView.h"
-#import "EUExBase.h"
 #import "TYDotIndicatorView.h"
 #import "ActivityViewShareController.h"
 
