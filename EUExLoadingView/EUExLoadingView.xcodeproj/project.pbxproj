@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		2153D5061D22585000A846F3 /* AppCanKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2153D5051D22585000A846F3 /* AppCanKit.framework */; };
 		3C942BC61A848AC800DFD503 /* EUExLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C942BC51A848AC800DFD503 /* EUExLoadingView.m */; };
-		3C942BEC1A84A7B700DFD503 /* MONActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C942BEB1A84A7B700DFD503 /* MONActivityIndicatorView.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		3C942BEC1A84A7B700DFD503 /* MONActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C942BEB1A84A7B700DFD503 /* MONActivityIndicatorView.m */; };
 		3CD9B4AE1C3A7A79003F3075 /* ActivityViewShareController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD9B4AD1C3A7A79003F3075 /* ActivityViewShareController.m */; };
 		F7991D211ADCA4520047E428 /* TYDotIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7991D201ADCA4520047E428 /* TYDotIndicatorView.m */; };
 /* End PBXBuildFile section */
@@ -41,13 +41,6 @@
 		3CD9B4AD1C3A7A79003F3075 /* ActivityViewShareController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityViewShareController.m; sourceTree = "<group>"; };
 		F7991D1F1ADCA4520047E428 /* TYDotIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYDotIndicatorView.h; sourceTree = "<group>"; };
 		F7991D201ADCA4520047E428 /* TYDotIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYDotIndicatorView.m; sourceTree = "<group>"; };
-		F7991D231ADCA4710047E428 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
-		F7991D241ADCA4710047E428 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
-		F7991D251ADCA4710047E428 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
-		F7991D261ADCA4710047E428 /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
-		F7991D271ADCA4710047E428 /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
-		F7991D281ADCA4710047E428 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
-		F7991D291ADCA4710047E428 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,7 +115,6 @@
 			isa = PBXGroup;
 			children = (
 				2153D5051D22585000A846F3 /* AppCanKit.framework */,
-				F7991D221ADCA4710047E428 /* JSON */,
 				3C942BE91A84A7B700DFD503 /* MONActivityIndicatorView */,
 			);
 			path = sourceCode;
@@ -138,21 +130,6 @@
 			);
 			path = MONActivityIndicatorView;
 			sourceTree = "<group>";
-		};
-		F7991D221ADCA4710047E428 /* JSON */ = {
-			isa = PBXGroup;
-			children = (
-				F7991D231ADCA4710047E428 /* JSON.h */,
-				F7991D241ADCA4710047E428 /* NSObject+SBJSON.h */,
-				F7991D251ADCA4710047E428 /* NSString+SBJSON.h */,
-				F7991D261ADCA4710047E428 /* SBJSON.h */,
-				F7991D271ADCA4710047E428 /* SBJsonBase.h */,
-				F7991D281ADCA4710047E428 /* SBJsonParser.h */,
-				F7991D291ADCA4710047E428 /* SBJsonWriter.h */,
-			);
-			name = JSON;
-			path = EUExLoadingView/JSON;
-			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -297,7 +274,7 @@
 		3C942BD51A848AC800DFD503 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/uexLoadingView/";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -315,7 +292,7 @@
 		3C942BD61A848AC800DFD503 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/uexLoadingView/";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

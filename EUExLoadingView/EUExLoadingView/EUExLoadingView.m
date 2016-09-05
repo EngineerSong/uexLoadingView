@@ -8,7 +8,7 @@
 
 #import "EUExLoadingView.h"
 #import "EUtility.h"
-#import "JSON.h"
+
 @interface EUExLoadingView () <MONActivityIndicatorViewDelegate>
 @property (retain, nonatomic)  TYDotIndicatorView *circleView;
 @property (retain, nonatomic)  MONActivityIndicatorView  *indicatorView;
@@ -38,8 +38,9 @@
     
     if (inArguments.count > 0 ) {
        
-        NSString *dataJson = [inArguments objectAtIndex:0];
-        NSDictionary *dataDict = [dataJson JSONValue];
+        //NSString *dataJson = [inArguments objectAtIndex:0];
+        //NSDictionary *dataDict = [dataJson JSONValue];
+        ACArgsUnpack(NSDictionary *dataDict) = inArguments;
         x = [[dataDict objectForKey:@"x"] integerValue];
         y = [[dataDict objectForKey:@"y"] integerValue];
         w = [[dataDict objectForKey:@"w"] integerValue];
@@ -56,7 +57,6 @@
         }
         MONActivityIndicatorView *indicatorView = [[MONActivityIndicatorView alloc] init];
         self.indicatorView = indicatorView;
-        [indicatorView release];
         self.indicatorView.delegate = self;
         self.indicatorView.numberOfCircles = pointNum;
         self.indicatorView.radius = 10;
@@ -77,7 +77,6 @@
          self.circleView.layer.cornerRadius = 10.0f;
         //[EUtility brwView:meBrwView addSubview: self.circleView];
         [[self.webViewEngine webView] addSubview:self.circleView];
-        [ self.circleView release];
     }
 }
 -(void)openCircleLoading:(NSMutableArray *)inArguments{
@@ -96,7 +95,6 @@
     [[self.webViewEngine webView] addSubview:self.activityView];
     [self.activityView startAnimating];
     
-    [self.activityView release];
     
 }
 #pragma mark -
@@ -119,56 +117,13 @@
     self.pointColorArr  = nil;
 }
 
-////presentModalViewController的方式在ios7上设置不了透明
-//-(void)openCircleLoading:(NSMutableArray *)inArguments{
-//    ActivityViewShareController *shareView=[ActivityViewShareController sharedManager];
-//    if (shareView.activityView) {
-//        [shareView.activityView stopAnimating];
-//        [shareView.activityView removeFromSuperview];
-//        shareView.activityView = nil;
-//    }
-//    
-//    shareView.activityView = [[UIActivityIndicatorView alloc]  initWithFrame:[EUtility brwWndFrame:meBrwView ]];
-//    shareView.activityView.activityIndicatorViewStyle=UIActivityIndicatorViewStyleWhiteLarge;
-//    shareView.activityView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
-//    
-//    if ([[[UIDevice currentDevice] systemVersion] floatValue]>=8.0) {
-//        shareView.modalPresentationStyle=UIModalPresentationOverCurrentContext;
-//    }else{
-//        shareView.modalPresentationStyle=UIModalPresentationCurrentContext;
-//        
-//    }
-//    [EUtility brwView:meBrwView presentModalViewController:shareView animated:NO];
-//    
-//    [shareView.activityView release];
-//    
-//}
-//-(void)close:(NSMutableArray *)inArguments {
-//    
-//    if (self.indicatorView) {
-//        [_indicatorView removeFromSuperview];
-//        self.indicatorView = nil;
-//    }
-//    if (self.circleView) {
-//        [_circleView removeFromSuperview];
-//        self.circleView = nil;
-//    }
-//    ActivityViewShareController *shareView=[ActivityViewShareController sharedManager];
-//    if (shareView.activityView) {
-//        [shareView.activityView stopAnimating];
-//        [shareView.activityView removeFromSuperview];
-//        shareView.activityView = nil;
-//        [shareView back];
-//    }
-//    self.pointColorArr  = nil;
-//}
 
 -(void)clean{
     [self close:nil];
 }
 -(void)dealloc{
     [self close:nil];
-    [super dealloc];
+    
 }
 
 @end
