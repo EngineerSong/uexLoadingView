@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2153D5061D22585000A846F3 /* AppCanKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2153D5051D22585000A846F3 /* AppCanKit.framework */; };
 		3C942BC61A848AC800DFD503 /* EUExLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C942BC51A848AC800DFD503 /* EUExLoadingView.m */; };
-		3C942BEC1A84A7B700DFD503 /* MONActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C942BEB1A84A7B700DFD503 /* MONActivityIndicatorView.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		3C942BEC1A84A7B700DFD503 /* MONActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C942BEB1A84A7B700DFD503 /* MONActivityIndicatorView.m */; };
 		3CD9B4AE1C3A7A79003F3075 /* ActivityViewShareController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD9B4AD1C3A7A79003F3075 /* ActivityViewShareController.m */; };
 		F7991D211ADCA4520047E428 /* TYDotIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7991D201ADCA4520047E428 /* TYDotIndicatorView.m */; };
 /* End PBXBuildFile section */
@@ -26,11 +27,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2153D5051D22585000A846F3 /* AppCanKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppCanKit.framework; sourceTree = "<group>"; };
 		3C284B071A84C25D00EB0712 /* EUExLoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EUExLoadingView.h; sourceTree = "<group>"; };
 		3C942BC01A848AC700DFD503 /* libuexLoadingView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libuexLoadingView.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C942BC51A848AC800DFD503 /* EUExLoadingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EUExLoadingView.m; sourceTree = "<group>"; };
 		3C942BD11A848AC800DFD503 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3C942BE41A84A7B700DFD503 /* EUExBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUExBase.h; sourceTree = "<group>"; };
 		3C942BE51A84A7B700DFD503 /* EUExBaseDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUExBaseDefine.h; sourceTree = "<group>"; };
 		3C942BE61A84A7B700DFD503 /* EUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUtility.h; sourceTree = "<group>"; };
 		3C942BE71A84A7B700DFD503 /* EUExLoadingView-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EUExLoadingView-Prefix.pch"; sourceTree = "<group>"; };
@@ -40,13 +41,6 @@
 		3CD9B4AD1C3A7A79003F3075 /* ActivityViewShareController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityViewShareController.m; sourceTree = "<group>"; };
 		F7991D1F1ADCA4520047E428 /* TYDotIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYDotIndicatorView.h; sourceTree = "<group>"; };
 		F7991D201ADCA4520047E428 /* TYDotIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYDotIndicatorView.m; sourceTree = "<group>"; };
-		F7991D231ADCA4710047E428 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
-		F7991D241ADCA4710047E428 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
-		F7991D251ADCA4710047E428 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
-		F7991D261ADCA4710047E428 /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
-		F7991D271ADCA4710047E428 /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
-		F7991D281ADCA4710047E428 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
-		F7991D291ADCA4710047E428 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2153D5061D22585000A846F3 /* AppCanKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,7 +105,6 @@
 		3C942BE31A84A7B700DFD503 /* engineHeader */ = {
 			isa = PBXGroup;
 			children = (
-				3C942BE41A84A7B700DFD503 /* EUExBase.h */,
 				3C942BE51A84A7B700DFD503 /* EUExBaseDefine.h */,
 				3C942BE61A84A7B700DFD503 /* EUtility.h */,
 			);
@@ -120,7 +114,7 @@
 		3C942BE81A84A7B700DFD503 /* sourceCode */ = {
 			isa = PBXGroup;
 			children = (
-				F7991D221ADCA4710047E428 /* JSON */,
+				2153D5051D22585000A846F3 /* AppCanKit.framework */,
 				3C942BE91A84A7B700DFD503 /* MONActivityIndicatorView */,
 			);
 			path = sourceCode;
@@ -136,21 +130,6 @@
 			);
 			path = MONActivityIndicatorView;
 			sourceTree = "<group>";
-		};
-		F7991D221ADCA4710047E428 /* JSON */ = {
-			isa = PBXGroup;
-			children = (
-				F7991D231ADCA4710047E428 /* JSON.h */,
-				F7991D241ADCA4710047E428 /* NSObject+SBJSON.h */,
-				F7991D251ADCA4710047E428 /* NSString+SBJSON.h */,
-				F7991D261ADCA4710047E428 /* SBJSON.h */,
-				F7991D271ADCA4710047E428 /* SBJsonBase.h */,
-				F7991D281ADCA4710047E428 /* SBJsonParser.h */,
-				F7991D291ADCA4710047E428 /* SBJsonWriter.h */,
-			);
-			name = JSON;
-			path = EUExLoadingView/JSON;
-			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -295,8 +274,12 @@
 		3C942BD51A848AC800DFD503 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/uexLoadingView/";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EUExLoadingView/sourceCode",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "EUExLoadingView/EUExLoadingView-Prefix.pch";
 				ONLY_ACTIVE_ARCH = NO;
@@ -309,8 +292,12 @@
 		3C942BD61A848AC800DFD503 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/uexLoadingView/";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EUExLoadingView/sourceCode",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "EUExLoadingView/EUExLoadingView-Prefix.pch";
 				ONLY_ACTIVE_ARCH = NO;
